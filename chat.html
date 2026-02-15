@@ -29,7 +29,7 @@
   }
   </script>
   
-  <!-- SCHEMA.ORG: Service -->
+    <!-- SCHEMA.ORG: Service (опис послуги) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,15 +37,27 @@
     "name": "Онлайн психологічна підтримка",
     "provider": {
       "@type": "Organization",
-      "name": "Safe Place"
+      "name": "Safe Place",
+      "url": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/"
     },
     "serviceType": "Психологічна консультація",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Ukraine",
+      "identifier": "UA"
+    },
     "description": "Безкоштовна анонімна психологічна підтримка через AI-чат",
-    "areaServed": "UA",
     "availableChannel": {
       "@type": "ServiceChannel",
       "serviceUrl": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/chat.html",
-      "serviceType": "OnlineChat"
+      "serviceSmsNumber": "380800500225",
+      "availableLanguage": ["Ukrainian", "Russian"]
+    },
+    "termsOfService": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/privacy.html",
+    "isRelatedTo": {
+      "@type": "Service",
+      "name": "Екстрена психологічна допомога",
+      "url": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/emergency.html"
     }
   }
   </script>
@@ -188,4 +200,5 @@
 </body>
 
 </html>
+
 
