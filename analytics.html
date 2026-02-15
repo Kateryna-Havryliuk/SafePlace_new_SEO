@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ОПТИМІЗОВАНИЙ TITLE -->
+    <title>Аналітика емоційного стану | Статистика настрою | Safe Place</title>
+    
+    <!-- ДОДАНИЙ META DESCRIPTION -->
+    <meta name="description" content="Персональна аналітика вашого емоційного стану: статистика настрою, тенденції, рекомендації. Відстежуйте динаміку благополуччя з Safe Place.">
+    
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://kateryna-havryliuk.github.io/SafePlace_new_SEO/analytics.html">
+    
+    <!-- SCHEMA.ORG: Dashboard -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Аналітика Safe Place",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "UAH"
+      },
+      "description": "Персональна аналітика емоційного стану та психологічного благополуччя",
+      "url": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/analytics.html"
+    }
+    </script>
+    
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Головна",
+          "item": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Аналітика",
+          "item": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/analytics.html"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="alternate" hreflang="uk" href="https://kateryna-havryliuk.github.io/SafePlace_new_SEO/page.html" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/analytics.css">
+    
+    <script>
+        (function() {
+            const isAnalytics = window.location.pathname.includes('analytics');
+            if (isAnalytics) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                const saved = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = saved || (prefersDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            }
+            document.documentElement.style.visibility = 'hidden';
+        })();
+    </script>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <!-- Заголовок сторінки -->
+        <div class="header">
+            <h1>📊 Аналітика психологічної підтримки</h1>
+            <p>Аналіз емоційних станів та тенденцій користувачів</p>
+        </div>
+
+            
+        <div id="content">
+            <!-- Блок для неавторизованих користувачів -->
+            <div class="login-prompt" id="loginPrompt">
+                <h2>🔐 Необхідна авторизація</h2>
+                <p>Для перегляду аналітики будь ласка увійдіть в систему</p>
+                <button onclick="window.location.href = 'index.html'" 
+                        style="padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Перейти до входу
+                </button>
+            </div>
+
+            <!-- Основний контент аналітики (показується після авторизації) -->
+            <div id="analyticsContent" style="display: none;">
+                <!-- Статистичні картки -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div>👥 Користувачів</div>
+                        <div class="stat-number" id="totalUsers">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div>💬 Повідомлень</div>
+                        <div class="stat-number" id="totalMessages">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div>⚠️ Критичних</div>
+                        <div class="stat-number" id="criticalMessages">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div>📈 Активність</div>
+                        <div class="stat-number" id="weeklyActivity">0</div>
+                    </div>
+                </div>
+
+                <!-- Ряд з графіками -->
+                <div class="chart-row">
+                    <div class="chart-container">
+                        <h3>📊 Популярні теми</h3>
+                        <canvas id="topicsChart" width="400" height="300"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>😊 Тональність по категоріям</h3>
+                        <canvas id="sentimentChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+
+                <!-- Інформаційні картки -->
+                <div class="cards">
+                    <div class="card">
+                        <h3>👤 Ваші інсайти</h3>
+                        <div id="userInsights">Завантаження...</div>
+                    </div>
+                    <div class="card">
+                        <h3>🌍 Глобальна статистика</h3>
+                        <div id="globalStats">Завантаження...</div>
+                    </div>
+                    <div class="card">
+                        <h3>📈 Ваша активність</h3>
+                        <div id="userActivity">Завантаження...</div>
+                    </div>
+                </div>
+
+                <!-- Рекомендації -->
+                <div class="card">
+                    <h3>💡 Рекомендації на основі аналізу</h3>
+                    <div id="recommendations"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript файли -->
+    <script src="js/theme.js"></script>
+    <script src="js/analytics.js"></script>
+    
+    <!-- Перевірка завантаження ресурсів -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== Analytics Page Loaded ===');
+            
+            // Перевірка завантаження CSS файлів
+            const cssFiles = Array.from(document.styleSheets)
+                .filter(sheet => sheet.href && sheet.href.includes('.css'))
+                .map(sheet => sheet.href.split('/').pop());
+            console.log('CSS files loaded:', cssFiles);
+            
+            // Перевірка завантаження JavaScript модулів
+            console.log('JS modules:', {
+                themeManager: window.themeManager ? '✅' : '❌',
+                analyticsApp: window.analyticsApp ? '✅' : '❌',
+                Chart: window.Chart ? '✅' : '❌'
+            });
+            
+            // Показ помилки якщо деякі файли не завантажились
+            if (!window.themeManager || !window.analyticsApp) {
+                console.error('Some JS files failed to load');
+                const errorDiv = document.createElement('div');
+                errorDiv.style.cssText = `
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    background: #ef4444;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 5px;
+                    z-index: 10000;
+                `;
+                errorDiv.textContent = 'Помилка завантаження ресурсів';
+                document.body.appendChild(errorDiv);
+                
+                // Автоматичне видалення повідомлення про помилку через 5 секунд
+                setTimeout(() => errorDiv.remove(), 5000);
+            }
+        });
+    </script>
+   
+</body>
+</html>
