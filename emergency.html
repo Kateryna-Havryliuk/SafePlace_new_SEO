@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ОПТИМІЗОВАНІ МЕТАДАНІ -->
   <title>Екстрена психологічна допомога | Гарячі лінії 24/7</title>
   <meta name="description" content="Термінова психологічна підтримка: телефони довіри 0-800-500-225, 5522. Безкоштовно, анонімно, конфіденційно. Кризова допомога доступна зараз. Подзвоніть!">
-  <link rel="alternate" hreflang="uk" href="https://kateryna-havryliuk.github.io/SafePlace_new_SEO/page.html" />
   <link rel="canonical" href="https://kateryna-havryliuk.github.io/SafePlace_new_SEO/emergency.html">
   
   <!-- Schema.org: MedicalWebPage -->
@@ -23,20 +24,33 @@
   }
   </script>
   
-  <!-- Schema.org: MedicalOrganization (для кожної служби) -->
+  <!-- Schema.org: EmergencyService (ВИПРАВЛЕНО) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    "name": "Лінія довіри",
+    "@type": "EmergencyService",
+    "name": "Лінія довіри Safe Place",
+    "description": "Екстрена психологічна допомога цілодобово. Безкоштовно та анонімно.",
     "telephone": "+380800500225",
     "url": "https://kateryna-havryliuk.github.io/SafePlace_new_SEO/emergency.html",
-    "availableService": {
-      "@type": "MedicalTherapy",
-      "name": "Кризова психологічна консультація"
+    "areaServed": {
+      "@type": "Country",
+      "name": "Ukraine"
     },
-    "isAccessibleForFree": true,
-    "availableLanguage": "Ukrainian"
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+380800500225",
+    "contactType": "emergency",
+    "availableLanguage": "Ukrainian",
+    "areaServed": "UA",
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  },
+    "isAccessibleForFree": true
   }
   </script>
   
@@ -232,3 +246,4 @@
 </body>
 
 </html>
+
