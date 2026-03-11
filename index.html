@@ -838,10 +838,16 @@
         </div>
       </div>
       
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Тепла дорога серед поля під блакитним небом">
-      </div>
-    </div>
+      <div class="hero-image"> 
+         <picture> 
+           <source srcset="images/hero.webp" type="image/webp"> 
+           <img src="images/hero.jpg"  
+                alt="Тепла дорога серед поля під блакитним небом"  
+                width="1600"  
+                height="900" 
+                fetchpriority="high"> 
+         </picture> 
+       </div>
   </section>
 
 <!-- ====== TECHNIQUES SECTION ====== -->
@@ -1280,9 +1286,16 @@
       
       <div class="blog-grid">
         <article class="blog-card">
-          <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?q=80&w=800&auto=format&fit=crop" alt="Людина пише щоденник">
-          </div>
+          <div class="blog-image"> 
+             <picture> 
+               <source srcset="images/article-1.webp" type="image/webp"> 
+               <img src="images/article-1.jpg"  
+                    alt="Людина пише щоденник"  
+                    width="800"  
+                    height="600" 
+                    loading="lazy"> 
+             </picture> 
+          </div> 
           <div class="blog-content">
             <span class="blog-date"><i class="far fa-calendar"></i> 15 вересня 2025</span>
             <h3 class="blog-title">Як говорити про почуття без «мені незручно»</h3>
@@ -1293,7 +1306,14 @@
         
         <article class="blog-card">
           <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop" alt="Людина спить">
+            <picture> 
+             <source srcset="images/article-2.webp" type="image/webp"> 
+             <img src="images/article-2.jpg"  
+                  alt="Людина спить"  
+                  width="800"  
+                  height="600" 
+                  loading="lazy"> 
+            </picture>
           </div>
           <div class="blog-content">
             <span class="blog-date"><i class="far fa-calendar"></i> 28 жовтня 2025</span>
@@ -1305,7 +1325,14 @@
 
         <article class="blog-card">
           <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Людина медитує">
+            <picture> 
+             <source srcset="images/article-3.webp" type="image/webp"> 
+             <img src="images/article-3.jpg"  
+                  alt="Людина медитує"  
+                  width="800"  
+                  height="600" 
+                  loading="lazy"> 
+            </picture>
           </div>
           <div class="blog-content">
             <span class="blog-date"><i class="far fa-calendar"></i> 10 листопада 2025</span>
@@ -1317,7 +1344,14 @@
 
         <article class="blog-card">
           <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1532634993-15f421e42ec0?q=80&w=800&auto=format&fit=crop" alt="Людина на природі">
+            <picture> 
+             <source srcset="images/article-4.webp" type="image/webp"> 
+             <img src="images/article-4.jpg"  
+                  alt="Людина на природі"  
+                  width="800"  
+                  height="600" 
+                  loading="lazy"> 
+            </picture>
           </div>
           <div class="blog-content">
             <span class="blog-date"><i class="far fa-calendar"></i> 5 грудня 2025</span>
@@ -1464,4 +1498,5 @@
 </body>
 
 </html>
+
 
