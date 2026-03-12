@@ -1,0 +1,14 @@
+# robots.txt для Safe Place - психологічна підтримка онлайн
+# https://kateryna-havryliuk.github.io/SafePlace_new_SEO/
+
+User-agent: *
+Disallow: /account.html
+Disallow: /analytics.html
+Disallow: /drafts/
+Disallow: /private/
+Allow: /
+
+User-agent: Googlebot
+Disallow: /no-google/
+
+Sitemap: https://kateryna-havryliuk.github.io/SafePlace_new_SEO/sitemap.xml
